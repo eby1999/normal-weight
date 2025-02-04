@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة الوزن المثالي</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="mew1.jpeg">
+        </a>
+    <div class="calculator">
+        <h2>حاسبة الوزن المثالي</h2>
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" placeholder="أدخل اسمك" required>
+
+        <label for="age">العمر (بالسنوات):</label>
+        <input type="number" id="age" placeholder="أدخل عمرك" min="1" required>
+
+        <label for="height">الطول (بالسنتيمتر):</label>
+        <input type="number" id="height" placeholder="أدخل طولك" min="50" required>
+
+        <button onclick="calculateIdealWeight()">احسب الوزن المثالي</button>
+
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
