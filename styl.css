@@ -1,100 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Work Sans", sans-serif;
-    text-align: center;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق حاسبة الوزن الطبيعي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>تطبيق حاسبة الوزن الطبيعي</h1>
+    </header>
 
-body {
-    background-color: rgb(18, 27, 37);
-    color: #ffffff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+    <section class="calculator-section">
+        <div class="form-container">
+            <h2>أدخل بياناتك</h2>
+            <form id="weightForm" onsubmit="event.preventDefault(); calculateIdealWeight();">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" placeholder="أدخل اسمك" required>
 
-header {
-    padding: 20px;
-    background-color: #1aa090;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+                <label for="age">العمر:</label>
+                <input type="number" id="age" placeholder="أدخل عمرك" min="1" max="120" required>
 
-.calculator-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-}
+                <label for="height">الطول (سم):</label>
+                <input type="number" id="height" placeholder="أدخل طولك بالسم" min="30" max="300" required>
 
-.form-container {
-    background-color: #3333336a;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-}
+                <button type="submit" class="submit-btn">أحسب الوزن المثالي</button>
+            </form>
 
-h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #fff;
-}
+            <div id="result" class="result-container"></div>
+        </div>
+    </section>
 
-label {
-    display: block;
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-    color: #d6d6d6;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-input:focus {
-    border-color: #1aa090;
-}
-
-.submit-btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #218838;
-}
-
-.result-container {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    <script src="script.js"></script>
+</body>
+</html>
