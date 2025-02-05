@@ -1,36 +1,71 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق حاسبة الوزن الطبيعي</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>تطبيق حاسبة الوزن الطبيعي</h1>
-    </header>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2a5298;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
 
-    <section class="calculator-section">
-        <div class="form-container">
-            <h2>أدخل بياناتك</h2>
-            <form id="weightForm" onsubmit="event.preventDefault(); calculateIdealWeight();">
-                <label for="name">الاسم:</label>
-                <input type="text" id="name" placeholder="أدخل اسمك" required>
+/* تنسيق الحاوية */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 
-                <label for="age">العمر:</label>
-                <input type="number" id="age" placeholder="أدخل عمرك" min="1" max="120" required>
+/* تنسيق العنوان */
+h1.vag {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
 
-                <label for="height">الطول (سم):</label>
-                <input type="number" id="height" placeholder="أدخل طولك بالسم" min="30" max="300" required>
+/* تنسيق الحقول */
+form {
+    text-align: left;
+}
 
-                <button type="submit" class="submit-btn">أحسب الوزن المثالي</button>
-            </form>
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    display: block;
+    margin: 10px 0 5px;
+}
 
-            <div id="result" class="result-container"></div>
-        </div>
-    </section>
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* تنسيق الزر */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #ff512f, #f09819);
+}
